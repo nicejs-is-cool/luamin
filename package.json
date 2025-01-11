@@ -1,5 +1,5 @@
 {
-	"name": "@nicejs-is-cool/luamin",
+	"name": "@nicejsisverycool/luamin",
 	"private": false,
 	"version": "1.0.4",
 	"description": "A Lua minifier written in JavaScript",
