@@ -58,7 +58,7 @@
 				try {
 					snippet = fs.readFileSync(snippet, 'utf8');
 				} catch(error) {
-					log(error.message + '\n' + error.toString())
+					log(error.toString() + "\n")
 					log('Error: no such file. (`%s`)', snippet);
 					return process.exit(1);
 				}
