@@ -4,7 +4,7 @@
 	var fs = require('fs');
 	var luamin = require('../luamin.js');
 	var minify = luamin.minify;
-	var snippets = process.argv.splice(2);
+	var snippets = process.argv.slice(2);
 	var option = snippets.shift();
 	var isFile = false;
 	var isAST = false;
@@ -58,6 +58,7 @@
 				try {
 					snippet = fs.readFileSync(snippet, 'utf8');
 				} catch(error) {
+					log(error.message + '\n' + error.toString())
 					log('Error: no such file. (`%s`)', snippet);
 					return process.exit(1);
 				}
